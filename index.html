@@ -1951,7 +1951,41 @@ button.footer-label:hover {
   opacity: 1;
   transform: translateX(0);
 }
- 
+
+
+        /* Smooth transition for section visibility */
+section {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+/* When the section is in view */
+section.visible {
+    opacity: 1;
+}
+
+/* Smooth transitions for buttons */
+button, .btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #FFD700; /* Golden hover effect */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Floating Message Card Animation */
+.floating-message-card {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.floating-message-card.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
     </style>
     <body>
         <!----LANDING SECTION---->
@@ -2504,4 +2538,70 @@ button.footer-label:hover {
         </div>
     </section>
 </body>
+    <script>
+    // Select all navigation links
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    // Detect the active section on scroll
+    let lastKnownScrollPosition = 0;
+    let ticking = false;
+
+    function onScroll() {
+        const scrollPosition = window.scrollY;
+
+        navLinks.forEach((link) => {
+            const section = document.querySelector(link.getAttribute('href'));
+            const sectionTop = section.offsetTop - 150;
+            const sectionBottom = sectionTop + section.offsetHeight;
+
+            if (scrollPosition >= sectionTop && scrollPosition <= sectionBottom) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', () => {
+        lastKnownScrollPosition = window.scrollY;
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                onScroll();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+
+    // Handle navigation link clicks
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelector(link.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+        // Detect when sections come into view (for smooth opacity transitions)
+const sections = document.querySelectorAll('section');
+
+function handleVisibility() {
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 200;
+        const sectionBottom = sectionTop + section.offsetHeight;
+
+        if (window.scrollY >= sectionTop && window.scrollY <= sectionBottom) {
+            section.classList.add('visible');
+        } else {
+            section.classList.remove('visible');
+        }
+    });
+}
+
+// Add event listener to scroll and trigger visibility checks
+window.addEventListener('scroll', handleVisibility);
+
+</script>
+
 </html>
