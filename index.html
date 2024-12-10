@@ -1896,7 +1896,7 @@ button.footer-label:hover {
 }
 
 #close-popup:hover {
-    background-color: lime;
+    background-color: white;
     border: 1px solid rgb(0, 0, 0);
     scale: 1.1;
     color: black;
@@ -1956,33 +1956,11 @@ button.footer-label:hover {
         /* Smooth transition for section visibility */
 section {
     opacity: 0;
-    transition: opacity 1s ease-out;
+    transition: opacity .5s ease-out;
 }
 
 /* When the section is in view */
 section.visible {
-    opacity: 1;
-}
-
-/* Smooth transitions for buttons */
-button, .btn {
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-button:hover, .btn:hover {
-    background-color: #FFD700; /* Golden hover effect */
-    transform: scale(1.05); /* Slightly enlarge the button */
-}
-
-/* Floating Message Card Animation */
-.floating-message-card {
-    transform: translateY(100px);
-    opacity: 0;
-    transition: transform 1s ease, opacity 1s ease;
-}
-
-.floating-message-card.visible {
-    transform: translateY(0);
     opacity: 1;
 }
 
