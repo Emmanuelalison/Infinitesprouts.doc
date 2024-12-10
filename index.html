@@ -1403,7 +1403,7 @@ text-align: center;
     }
 }
 
-/*---TEAM---*/
+        /*---TEAM---*/
 .team_section {
   width: 100%;
   padding: 5%;
@@ -1896,72 +1896,22 @@ button.footer-label:hover {
 }
 
 #close-popup:hover {
-    background-color: white;
+    background-color: lime;
     border: 1px solid rgb(0, 0, 0);
     scale: 1.1;
     color: black;
 }
 
-
-
-
-/* Keyframes for animations */
-@keyframes fadeInFromBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInFromLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* Initial state of the sections (before they enter the viewport) */
-.scroll-animate {
-  opacity: 0;
-  transform: translateY(30px); /* Change as needed */
-  transition: opacity 1s, transform 1s;
-}
-
-.scroll-animate-left {
-  opacity: 0;
-  transform: translateX(-30px); /* Slide in from left */
-  transition: opacity 1s, transform 1s;
-}
-
-/* State when sections become visible */
-.scroll-animate.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.scroll-animate-left.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-
-        /* Smooth transition for section visibility */
+/* General Section Transitions */
 section {
     opacity: 0;
-    transition: opacity .5s ease-out;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
-/* When the section is in view */
 section.visible {
     opacity: 1;
+    transform: translateY(0);
 }
 
     </style>
