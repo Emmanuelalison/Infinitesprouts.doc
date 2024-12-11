@@ -1329,8 +1329,6 @@ text-align: center;
     border-radius: 15px;
     transition: transform 0.3s, box-shadow 0.3s;
     background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)); /* Gradient with transparency */
-    backdrop-filter: blur(8px); /* Optional: Frosted glass effect */
-    filter: brightness(95%); /* Slightly dim the card */
 
 }
 .ecosystem_section .ecosystem-card:hover {
