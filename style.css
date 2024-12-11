@@ -1898,3 +1898,5 @@ button.footer-label:hover {
     color: black;
 }
 
+.main-button-container {
+  display: flex;
