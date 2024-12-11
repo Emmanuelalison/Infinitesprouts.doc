@@ -1315,7 +1315,7 @@ text-align: center;
 }
 
 .ecosystem-card {
-      font-family: 'Courier New', Courier, monospace;
+      font-family: Poppins;
     display: flex;
     color: black;
     flex-direction: column;
