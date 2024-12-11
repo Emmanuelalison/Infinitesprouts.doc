@@ -1204,7 +1204,8 @@ text-align: center;
 }
 
 .tooltip {
-    color: #ffffff; /* Text color */
+    font-family: 'Courier New', Courier, monospace;
+    color: #b6adad; /* Text color */
     padding: 10px 15px; /* Padding for tooltip */
     border-radius: 10px; /* Rounded corners */
     max-width: 90%; /* Limit tooltip width */
@@ -1214,7 +1215,7 @@ text-align: center;
     transition: background-color 0.3s ease; /* Smooth transition */
     border: var(--border);
     box-shadow: 0 10px 30px rgba(100, 87, 87, 0.4); /* More intense shadow on hover */
-  background:rgb(0, 0, 0);
+    background:rgb(0, 0, 0);
 }
 
 /* User and Bot Message Specific Styles */
@@ -1225,9 +1226,9 @@ text-align: center;
 }
 
 .bot-response .tooltip {
-  margin-left: 30%;
+  margin-left: 10%;
   border-radius: 18px 18px 0 18px;
-    background: linear-gradient(130deg, black, gold,); /* Bot response color */
+  background: linear-gradient(130deg, black, gold,); /* Bot response color */
 }
 /* Tooltip Heading and Paragraph Styles */
 .tooltip h3 {
@@ -1238,7 +1239,7 @@ text-align: center;
 
 .tooltip p {
     margin: 0; /* Remove paragraph margin */
-    font-size: 14px; /* Message text size */
+    font-size: 17px; /* Message text size */
 }
 /* Responsive Design */
 @media (max-width: 768px) {
