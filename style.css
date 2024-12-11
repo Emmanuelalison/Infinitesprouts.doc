@@ -1107,7 +1107,6 @@ text-align: center;
 }
 
  /*-------About Section Styles-------*/
-
 .About_section {
     padding: 5%;
     background: black;
@@ -1214,6 +1213,9 @@ text-align: center;
     position: relative;
     display: inline-block; /* Allow tooltip to be inline */
     transition: background-color 0.3s ease; /* Smooth transition */
+    border: var(--border);
+    box-shadow: 0 10px 30px rgba(100, 87, 87, 0.4); /* More intense shadow on hover */
+  background:rgb(0, 0, 0);
 }
 
 /* User and Bot Message Specific Styles */
@@ -1370,9 +1372,13 @@ text-align: center;
         width: 100%;
         gap: 12px;
     }
+    .ecosystem-card .content-info h4 {
+      color: lime;
+    }
+    
     .ecosystem-card {
-        border-radius: 4px;
         width: 84%;
+        padding-bottom: 50px;
     }
     .ecosystem_heading h2 {
       width: 100%;
