@@ -606,7 +606,7 @@ input:checked + .slider:before {
     border: 1px solid gold;
     width: 100%; /* Cover the full width */
     height: 100%; /* Cover the full height */
-    background-image: url('/Assets/rice main background img.webp'); /* Path to your image */
+    background-image: url('rice background img - Copy.png'); /* Path to your image */
     background-size: cover; /* Adjust the image to cover the entire container */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* No repeating of the image */
@@ -651,6 +651,7 @@ input:checked + .slider:before {
   }
  .main p {
    margin: 0;
+   margin-top: 20px;
    font-family: Poppins;
    color: white;
    max-width: 650px;
@@ -1105,7 +1106,7 @@ text-align: center;
     }
 }
 
- /*-------About us------*/
+ /*-------About Section Styles-------*/
 
 .About_section {
     padding: 5%;
@@ -1160,7 +1161,7 @@ text-align: center;
     padding-bottom: 0;
     border: var(--border);
     overflow-y: hidden; /* Enable scrolling */
-    height: max-content; /* Set a max height */
+    height: 100%; /* Set a max height */
 }
 .About_section .main-button {
   margin: 0;
@@ -1192,12 +1193,11 @@ text-align: center;
   background-color: #2a2a2a; /* Darker background for message box */
   border-radius: 10px;
   padding: 20px;
-  padding-bottom: 0;
   width: 100%; /* Set max width for the message box to 50% */
   overflow-y: hidden; /* Enable scrolling */
-  height: 400px; /* Set a max height */
+  height: 100%; /* Set a max height */
   border: var(--border);
-    background-image: linear-gradient(145deg,black, #333, var(--background-color));
+  background-image: linear-gradient(145deg,black, #333, var(--background-color));
 }
 /* Message Styles */
 .message {
@@ -1226,7 +1226,7 @@ text-align: center;
 .bot-response .tooltip {
   margin-left: 30%;
   border-radius: 18px 18px 0 18px;
-    background: linear-gradient(130deg, black, gold, black); /* Bot response color */
+    background: linear-gradient(130deg, black, gold,); /* Bot response color */
 }
 /* Tooltip Heading and Paragraph Styles */
 .tooltip h3 {
@@ -1241,18 +1241,19 @@ text-align: center;
 }
 /* Responsive Design */
 @media (max-width: 768px) {
-  .About_section {
-    padding: 5px;
-  }
+    .About_section {
+        padding: 5px;
+    }
+
     .about_container {
-      padding: 15px;
-      flex-direction: column; /* Stack image and message box */
-      align-items: center; /* Center items */
+        padding: 15px;
+        flex-direction: column; /* Stack image and message box */
+        align-items: center; /* Center items */
     }
 
     .about-image {
-      height: 100%;
-        width: 100%; /* Image takes 80% on small screens */
+        height: 100%;
+        width: 100%; /* Image takes 100% on small screens */
     }
 
     .message-box {
@@ -1260,9 +1261,10 @@ text-align: center;
         margin-top: 30px;
         margin-left: 0; /* Reset margin */
     }
+
     .about_heading h2 {
-      width: 100%;
-      font-size: 14px;
+        width: 100%;
+        font-size: 1.8em;
     }
 }
 
@@ -1388,6 +1390,7 @@ text-align: center;
   height: 100px;
 }
 .team_section .main-button {
+  padding-left: 2%;
   display: flex;
   width: 100%;
 }
@@ -1435,11 +1438,11 @@ text-align: center;
   flex-direction: column;
   align-items: center;
   border: 1px solid lime; /* New tech green */
-  /* box-shadow: 0 10px 30px rgba(0, 255, 127, 0.5); Enhanced shadow for 3D effect */
   background-image: linear-gradient(black, rgb(15, 70, 15), rgb(10, 10, 10)); /* Darker gradient for cards */
   border-radius: 6px;
-  height: 40%;
+  height: 50%;
   margin: 2%;
+  padding: 10px;
   margin-bottom: 4%;
   width: 250px; /* Adjust as needed */
   text-align: center;
@@ -1526,6 +1529,7 @@ text-align: center;
   color: #8f8b8b;
 }
 .card-practice p {
+  font-size: 18px;
   font-family: Poppins;
   color: green;
   font-size: 24px;
@@ -1877,52 +1881,3 @@ button.footer-label:hover {
     color: black;
 }
 
-
-
-
-/* Keyframes for animations */
-@keyframes fadeInFromBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInFromLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* Initial state of the sections (before they enter the viewport) */
-.scroll-animate {
-  opacity: 0;
-  transform: translateY(30px); /* Change as needed */
-  transition: opacity 1s, transform 1s;
-}
-
-.scroll-animate-left {
-  opacity: 0;
-  transform: translateX(-30px); /* Slide in from left */
-  transition: opacity 1s, transform 1s;
-}
-
-/* State when sections become visible */
-.scroll-animate.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.scroll-animate-left.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
