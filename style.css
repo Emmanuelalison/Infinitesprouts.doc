@@ -1290,6 +1290,7 @@ text-align: center;
 }
 
 .ecosystem_heading h2 {
+    font-family: 'Courier New', Courier, monospace;
     color: lime; /* Bright tech green */
     font-size: 2.5em;
     margin-bottom: 30px;
@@ -1319,7 +1320,6 @@ text-align: center;
     flex-direction: column;
     align-items: center;
     height: 200px;
-    padding-bottom: 20px;
     width: 30%; 
     text-align: center;
     transition: color 1s, transform 3s;
@@ -1338,6 +1338,7 @@ text-align: center;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Shadow effect on hover */
 }
 .ecosystem-content {
+    font-family: 'Courier New', Courier, monospace;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1359,6 +1360,7 @@ text-align: center;
 }
 
 .ecosystem-content h4 {
+    font-family: 'Courier New', Courier, monospace;
     font-family: Poppins, sans-serif;
     margin: 5px 0;
     font-weight: normal;
@@ -1366,6 +1368,7 @@ text-align: center;
 }
 
 .ecosystem-content p {
+    font-family: 'Courier New', Courier, monospace;
     color: rgb(0, 0, 0);
     text-align: center;
 }
