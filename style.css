@@ -1313,7 +1313,6 @@ text-align: center;
     color: black;
     flex-direction: column;
     align-items: center;
-    border: 1px solid lime; 
     height: 200px;
     padding-bottom: 20px;
     width: 30%; 
@@ -1321,9 +1320,11 @@ text-align: center;
     transition: color 1s, transform 3s;
     overflow: hidden; 
     border: var(--border);
-    background-image: linear-gradient(145deg, #333, var(--background-color));
+    border-radius: 15px;
     transition: transform 0.3s, box-shadow 0.3s;
-    /* box-shadow:  0 0 6px 1px lime; */
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)); /* Gradient with transparency */
+    backdrop-filter: blur(8px); /* Optional: Frosted glass effect */
+    filter: brightness(95%); /* Slightly dim the card */
 }
 .ecosystem-card:hover {
     border: 1px solid lime;
