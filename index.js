@@ -119,3 +119,43 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+// JavaScript to handle dropdown closing and smooth scrolling to sections
+document.addEventListener('DOMContentLoaded', function () {
+
+  // Select all the navigation links
+  const navLinks = document.querySelectorAll('.nav-link');
+  
+  // Get the checkbox that controls the menu
+  const menuCheckbox = document.getElementById('main-check');
+  
+  // Function to close the menu (uncheck the checkbox)
+  function closeMenu() {
+    menuCheckbox.checked = false;
+  }
+  
+  // Attach click event listener to all navigation links
+  navLinks.forEach(function(link) {
+    link.addEventListener('click', function(event) {
+      // Close the menu when any navigation link is clicked
+      closeMenu();
+      
+      // Prevent default action to avoid instant jump (for smooth scrolling)
+      event.preventDefault();
+      
+      // Get the target section ID from the link's href
+      const targetId = link.getAttribute('href').substring(1); // remove the "#" from href
+      const targetSection = document.getElementById(targetId);
+      
+      // Scroll to the target section smoothly
+      if (targetSection) {
+        targetSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+
+});
