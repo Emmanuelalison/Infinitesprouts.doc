@@ -729,13 +729,13 @@ input:checked + .slider:before {
  }
 @media (max-width: 900px) {
   .main-content {
+    padding-left: 5%;
     width: 100%;
   }
   .floating-message-card {
     display: none;
   }
   .main p {
-    width: 600px;
     font-size: 17px;
   }
   .main h2 {
@@ -777,7 +777,6 @@ input:checked + .slider:before {
 }
 @media (max-width: 500px) {
   .main p {
-    width: 360px;
     font-size: 16px;
   }
   .main h2 {
@@ -790,7 +789,7 @@ input:checked + .slider:before {
    }
   .gold {
     color: rgb(221, 189, 10);
-    font-size: 40px;
+    font-size: 50px;
    }
 }
 @media (max-width: 400px) {
