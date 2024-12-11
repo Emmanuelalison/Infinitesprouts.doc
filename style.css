@@ -1333,11 +1333,10 @@ text-align: center;
     filter: brightness(95%); /* Slightly dim the card */
 
 }
-.ecosystem-card:hover {
+.ecosystem_section .ecosystem-card:hover {
     border: 1px solid lime;
     /* background-color:#007B50; Hover color */
     transform: scale(1.01); /* Scale effect on hover */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Shadow effect on hover */
 }
 .ecosystem-content {
     font-family: 'Courier New', Courier, monospace;
