@@ -584,6 +584,7 @@ input:checked + .slider:before {
 
    /*--------landing screen-------*/
    body {
+    font-family: 'Courier New', Courier, monospace;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -949,6 +950,7 @@ input:checked + .slider:before {
 }
 /*----SCROLLABLE CARDS---*/
 .card-section {
+    font-family: 'Courier New', Courier, monospace;
     width: 100vw;
     height: 200px;
     overflow: hidden;
@@ -994,6 +996,7 @@ input:checked + .slider:before {
 
 /*----SCROLLABLE CARDS (2)---*/
 .second_scrollable_card {
+  font-family: 'Courier New', Courier, monospace;
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -1107,6 +1110,7 @@ text-align: center;
 
  /*-------About Section Styles-------*/
 .About_section {
+    font-family: 'Courier New', Courier, monospace;
     padding: 5%;
     background: black;
     border-radius: 10px;
@@ -1272,6 +1276,7 @@ text-align: center;
 
 /*--OUR ECOSYSTEM--*/
 .ecosystem_section {
+    font-family: 'Courier New', Courier, monospace;
     position: relative;
     width: 100%;
     display: flex;
