@@ -685,7 +685,6 @@ input:checked + .slider:before {
   font-size: 26px;
   border-radius: 4px;
   color: #fff;
-
   margin-top: 30px;
 }
     
@@ -714,6 +713,11 @@ input:checked + .slider:before {
 }
 .main-button .btn{
   animation: none;
+}
+.main-button .button{
+  margin-top: 30px;
+  height:58px;
+  text-align: center;
 }
  .fast_icon {
     display: none;
@@ -815,11 +819,11 @@ input:checked + .slider:before {
 /* 3D Container for the Card */
 .floating-message-card {
   position: absolute;
-  top: 80%; /* Adjusted position */
+  top: 50%; /* Adjusted position */
   right: 10%; /* Distance from the right side */
   transform: translateY(-50%);
   width: 260px;
-  height: 150px;
+  height: 320px;
   perspective: 1000px; /* Add perspective for 3D effect */
   z-index: 10;
 }
@@ -1834,9 +1838,9 @@ button.footer-label:hover {
       padding: 20px;
       flex-direction: column;
     }
-    .quick-links ul {
+    /* .quick-links ul {
 
-    }
+    } */
     .quick-links,
     .subscribe-now {
       width: 100%;
@@ -1901,4 +1905,5 @@ button.footer-label:hover {
 .main-button-container {
   display: flex;
   flex-direction: row;
-  nackground: red;
+  background: red;
+}
